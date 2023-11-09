@@ -223,7 +223,8 @@ const projects = [
     ],
     category: ["All", "Academic Projects", "Mobile"],
     image: news_app_showcase,
-    source_code_link: "https://github.com/",
+    source_code_link:
+      "https://github.com/ACHRAF-YOUSSEF/news-reader-mobile-app",
   },
   {
     name: "Artflix Art Gallery",
