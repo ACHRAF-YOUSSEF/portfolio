@@ -70,12 +70,12 @@ const Navbar = () => {
           }}
         >
           <div className="w-9 h-9 rounded-full border border-[#5bc0eb6b] bg-[#0d2033] grid place-items-center mono text-[#7fd0f4] text-sm">
-            $&gt;
+            &gt;
           </div>
           <p className="text-slate-100 text-[15px] xs:text-[16px] sm:text-[18px] font-bold cursor-pointer truncate max-w-[150px] xs:max-w-none">
             Achraf Youssef
           </p>
-          <span className="hidden md:inline terminal-chip">arch-dev</span>
+          <span className="hidden md:inline terminal-chip">arch</span>
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-3">
