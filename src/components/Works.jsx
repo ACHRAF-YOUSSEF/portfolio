@@ -8,6 +8,10 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+  const isWorkInProgress = tags.some(
+    (tag) => normalizeCategory(tag.name) === "in progress"
+  );
+
   return (
     <motion.article
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
@@ -16,7 +20,28 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
       className="shell-card p-5 sm:w-[360px] w-full"
     >
       <div className="relative w-full h-[220px]">
-        <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
+        {image ? (
+          <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
+        ) : (
+          <div className="w-full h-full rounded-xl border border-[#66c7ef57] bg-[radial-gradient(circle_at_20%_20%,rgba(35,80,120,0.6),rgba(10,18,32,0.95))] p-4 flex flex-col justify-between">
+            <div className="flex items-center justify-between">
+              <span className="terminal-chip">prototype</span>
+              {isWorkInProgress && (
+                <span className="rounded-full border border-[#e2c86d5f] bg-[#e2c86d1a] px-2 py-0.5 text-[11px] text-[#f0dc96]">
+                  Work In Progress
+                </span>
+              )}
+            </div>
+
+            <div className="mono text-[#c6d6e8] text-sm leading-6">
+              <p>
+                <span className="text-[#a6e22e]">&gt; </span>{name.toLowerCase()}
+              </p>
+              <p className="text-slate-300">status: active development</p>
+              <p className="text-slate-300">preview: coming soon</p>
+            </div>
+          </div>
+        )}
 
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
           <button

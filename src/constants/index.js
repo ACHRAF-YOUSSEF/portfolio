@@ -18,6 +18,10 @@ export const navLinks = [
     title: "About",
   },
   {
+    id: "education",
+    title: "Education",
+  },
+  {
     id: "experience",
     title: "Experience",
   },
@@ -159,7 +163,59 @@ const techCategories = [
 
 const technologies = techCategories.flatMap((category) => category.items);
 
+const education = [
+  {
+    degree: "Engineering Degree in Software Engineering & Computer Systems",
+    school: "ISITCOM",
+    date: "2024 - Present",
+    details: [
+      "2nd year engineering student with focus on software engineering and computer systems.",
+    ],
+  },
+  {
+    degree: "Bachelor's Degree in Computer Science",
+    school: "ISITCOM",
+    date: "2021 - 2024",
+    details: [
+      "Completed undergraduate studies in computer science before entering engineering cycle.",
+      "Built academic projects across desktop, mobile, and web technologies.",
+    ],
+  },
+  {
+    degree: "Baccalaureate in Mathematics",
+    school: "Tunisia",
+    date: "2021",
+    details: [
+      "Scientific track with strong mathematics foundation.",
+    ],
+  },
+];
+
 const experiences = [
+  {
+    title: "Engineering Student",
+    company_name: "ISITCOM",
+    icon: creator,
+    iconBg: "#383E56",
+    date: "2024 - Present",
+    points: [
+      "Building academic software projects across mobile, desktop, and web tracks.",
+      "Learning Kotlin multiplatform workflows and Rust for desktop and systems programming.",
+      "Practicing DevOps and clean architecture patterns through self-hosted homelab tooling.",
+    ],
+  },
+  {
+    title: "Full Stack Intern (End-of-Studies Project)",
+    company_name: "Relead",
+    icon: relead,
+    iconBg: "#383E56",
+    date: "January 2024 - May 2024",
+    points: [
+      "Analysis, design, and full-stack implementation with REST APIs and MongoDB.",
+      "Contributed to cloud deployment and CI/CD integration.",
+      "Executed unit, integration, and functional testing and supported project documentation.",
+    ],
+  },
   {
     title: "Full stack Developer",
     company_name: "Relead",
@@ -247,6 +303,72 @@ const homelabServices = {
 };
 
 const projects = [
+  {
+    name: "Discord Clone (In Progress)",
+    description:
+      "Academic project focused on reproducing core Discord collaboration features with real-time messaging and structured channels.",
+    tags: [
+      {
+        name: "In Progress",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Academic",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Full Stack",
+        color: "orange-text-gradient",
+      },
+    ],
+    category: ["Academic Projects", "Web"],
+    image: null,
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+  },
+  {
+    name: "Password Manager Mobile App (In Progress)",
+    description:
+      "Academic mobile project for secure credential management with encrypted storage and clean user flows.",
+    tags: [
+      {
+        name: "In Progress",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Academic",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mobile",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: ["Academic Projects", "Mobile"],
+    image: null,
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+  },
+  {
+    name: "Music Mobile App (In Progress)",
+    description:
+      "Academic mobile application exploring media browsing and playback with a practical, user-first interface.",
+    tags: [
+      {
+        name: "In Progress",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Academic",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mobile",
+        color: "pink-text-gradient",
+      },
+    ],
+    category: ["Academic Projects", "Mobile"],
+    image: null,
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+  },
   {
     name: "Inventory management",
     description:
@@ -451,6 +573,7 @@ export {
   services,
   techCategories,
   technologies,
+  education,
   experiences,
   homelabServices,
   projects,

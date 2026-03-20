@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 
+const Education = lazy(() => import("./components/Education"));
 const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
 const Homelab = lazy(() => import("./components/Homelab"));
@@ -28,6 +29,7 @@ const App = () => {
           <Hero />
           <About />
           <Suspense fallback={<SectionFallback />}>
+            <Education />
             <Experience />
             <Tech />
             <Homelab />
