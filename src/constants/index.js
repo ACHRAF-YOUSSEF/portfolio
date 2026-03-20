@@ -1,7 +1,6 @@
 import {
   mobile,
   backend,
-  web,
   relead,
   creator,
   admin_dashboard,
@@ -38,20 +37,22 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Full Stack Developer",
+    icon: backend,
+    description:
+      "Building complete products across frontend, backend, APIs, and database design.",
   },
   {
     title: "Mobile Developer",
     icon: mobile,
+    description:
+      "Building smooth mobile experiences with native-focused performance and clear UX flows.",
   },
   {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Front Developer",
+    title: "Desktop App Developer",
     icon: creator,
+    description:
+      "Developing practical desktop tools focused on stability, usability, and performance.",
   },
 ];
 

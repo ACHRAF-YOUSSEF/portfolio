@@ -6,7 +6,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ index, title, icon }) => {
+const ServiceCard = ({ index, title, icon, description }) => {
   return (
     <motion.article
       variants={fadeIn("up", "spring", index * 0.1, 0.7)}
@@ -18,9 +18,7 @@ const ServiceCard = ({ index, title, icon }) => {
         </div>
         <h3 className="text-slate-100 font-semibold text-[20px]">{title}</h3>
       </div>
-      <p className="text-slate-400 text-sm mt-4">
-        Shipping reliable features with maintainable code and thoughtful UX.
-      </p>
+      <p className="text-slate-400 text-sm mt-4">{description}</p>
     </motion.article>
   );
 };
@@ -37,19 +35,18 @@ const About = () => {
         className="mt-6 text-slate-300 text-[17px] max-w-4xl leading-[30px]"
         variants={fadeIn("", "", 0.1, 1)}
       >
-        I am a software engineering student focused on building products that
-        feel robust and practical in real-world use. My workflow is heavily
-        Linux-oriented, with strong interests in Kotlin multiplatform, backend
-        systems, and clean frontend architecture.
+        I am a software engineering student focused on full stack product
+        development, from frontend user experience to backend APIs and data
+        layers. I enjoy building software that is reliable, maintainable, and
+        useful in real-world workflows.
         <br />
         <br />
-        Beyond coursework, I run self-hosted services, automate infrastructure,
-        and experiment with Rust and system-level tooling. I enjoy working on
-        products from idea to deployment while keeping performance and developer
-        experience in mind.
+        Beyond web platforms, I build desktop applications and self-hosted
+        tooling, with a Linux-first workflow centered on automation,
+        performance, and clean architecture.
       </motion.p>
 
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
