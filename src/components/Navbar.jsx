@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { navLinks } from "../constants";
@@ -8,6 +8,53 @@ import { menu, close } from "../assets";
 const Navbar = () => {
   const [active, setActive] = useState("About");
   const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      const sectionEntries = navLinks
+        .map((link) => {
+          const anchor = document.getElementById(link.id);
+          const section = anchor?.closest("section");
+
+          if (!anchor || !section) {
+            return null;
+          }
+
+          const sectionTop = section.getBoundingClientRect().top + globalThis.scrollY;
+
+          return {
+            id: link.id,
+            title: link.title,
+            top: sectionTop,
+          };
+        })
+        .filter(Boolean);
+
+      if (!sectionEntries.length) {
+        return;
+      }
+
+      const scrollPosition = globalThis.scrollY + 140;
+      const currentSection = [...sectionEntries]
+        .reverse()
+        .find((entry) => scrollPosition >= entry.top);
+
+      if (currentSection) {
+        setActive(currentSection.title);
+      } else {
+        setActive(sectionEntries[0].title);
+      }
+    };
+
+    updateActiveSection();
+    globalThis.addEventListener("scroll", updateActiveSection, { passive: true });
+    globalThis.addEventListener("hashchange", updateActiveSection);
+
+    return () => {
+      globalThis.removeEventListener("scroll", updateActiveSection);
+      globalThis.removeEventListener("hashchange", updateActiveSection);
+    };
+  }, []);
 
   return (
     <nav
