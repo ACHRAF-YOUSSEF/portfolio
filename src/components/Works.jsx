@@ -1,96 +1,129 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
-import React from "react";
-
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Tilt } from "react-tilt";
+
 import { github } from "../assets";
-
 import { styles } from "../styles";
-
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import { useState } from "react";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div>
-      <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
+    <motion.article
+      variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+      initial="hidden"
+      animate="show"
+      className="shell-card p-5 sm:w-[360px] w-full"
+    >
+      <div className="relative w-full h-[220px]">
+        <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              onClick={() => window.open(source_code_link, "_blank")}
-            >
-              <img
-                src={github}
-                alt="github"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <button
+            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer border border-[#66c7ef57]"
+            onClick={() => window.open(source_code_link, "_blank")}
+            aria-label={`Open ${name} source code`}
+            type="button"
+          >
+            <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
+          </button>
         </div>
+      </div>
 
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
+      <div className="mt-5">
+        <h3 className="text-slate-100 font-bold text-[24px]">{name}</h3>
+        <p className="mt-2 text-slate-400 text-[14px]">{description}</p>
+      </div>
 
-        <div className="mt-4 flex flex-wrap gap-2">
-          {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-              #{tag.name}
-            </p>
-          ))}
-        </div>
-      </Tilt>
-    </motion.div>
+      <div className="mt-4 flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            #{tag.name}
+          </p>
+        ))}
+      </div>
+    </motion.article>
   );
 };
 
 const ProjectCategory = ({ name, onClick, isSelected }) => {
-  const buttonStyle = isSelected
-    ? "text-white border-purple-500"
-    : "text-[#ADB7BE] hover:border-white border-slate-600";
-
   return (
     <button
       onClick={() => onClick(name)}
-      className={`${buttonStyle} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={`category-btn ${
+        isSelected ? "active" : ""
+      } rounded-full border px-5 py-2 text-sm sm:text-base cursor-pointer transition`}
+      type="button"
     >
       {name}
     </button>
   );
 };
 
+const normalizeCategory = (value) => String(value ?? "").trim().toLowerCase();
+
+const projectHasCategory = (project, selectedCategory) => {
+  if (normalizeCategory(selectedCategory) === "all") {
+    return true;
+  }
+
+  if (Array.isArray(project.category)) {
+    return project.category.some(
+      (category) => normalizeCategory(category) === normalizeCategory(selectedCategory)
+    );
+  }
+
+  return normalizeCategory(project.category) === normalizeCategory(selectedCategory);
+};
+
+const preferredCategoryOrder = [
+  "All",
+  "Academic Projects",
+  "Personal Projects",
+  "Desktop",
+  "Mobile",
+  "Web",
+];
+
 const Works = () => {
-  const categories = [
-    "All",
-    "Academic Projects",
-    "Personal Projects",
-    "Desktop",
-    "Mobile",
-    "Web",
-  ];
+  const categories = useMemo(() => {
+    const availableCategories = projects.flatMap((project) =>
+      Array.isArray(project.category) ? project.category : [project.category]
+    );
+
+    const uniqueCategories = [
+      "All",
+      ...new Set(
+        availableCategories.filter(
+          (category) => category && normalizeCategory(category) !== "all"
+        )
+      ),
+    ];
+
+    const orderedPreferred = preferredCategoryOrder.filter((category) =>
+      uniqueCategories.some(
+        (availableCategory) =>
+          normalizeCategory(availableCategory) === normalizeCategory(category)
+      )
+    );
+
+    const customCategories = uniqueCategories.filter(
+      (category) =>
+        !preferredCategoryOrder.some(
+          (preferredCategory) =>
+            normalizeCategory(preferredCategory) === normalizeCategory(category)
+        )
+    );
+
+    return [...orderedPreferred, ...customCategories];
+  }, []);
+
   const [category, setCategory] = useState("All");
+
+  const filteredProjects = useMemo(
+    () => projects.filter((project) => projectHasCategory(project, category)),
+    [category]
+  );
 
   const handleCategoryChange = (newCategory) => {
     setCategory(newCategory);
@@ -98,29 +131,28 @@ const Works = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+      <motion.div variants={textVariant()} initial="hidden" animate="show">
+        <p className={styles.sectionSubText}>Portfolio</p>
+        <h2 className={styles.sectionHeadText}>Selected Projects</h2>
       </motion.div>
 
       <div className="w-full flex">
         <motion.p
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-slate-300 text-[17px] max-w-3xl leading-[30px]"
           variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          animate="show"
         >
-          Following projects showcase my skills and experience throughout
-          real-world examples of my work.
-          <br />
-          It reflects my ability to solve complex problems, work with different
-          tchnologies, and manage projects effectively.
+          A curated set of projects built across academic and personal tracks.
+          Each one reflects problem-solving, product thinking, and full-cycle
+          implementation from design to deployment.
         </motion.p>
       </div>
 
-      <div className="text-white flex-row justify-center items-center mt-10 flex flex-wrap gap-7">
-        {categories.map((name, index) => (
+      <div className="text-white mt-8 flex flex-wrap gap-3">
+        {categories.map((name) => (
           <ProjectCategory
             key={name}
-            index={index}
             onClick={handleCategoryChange}
             name={name}
             isSelected={category === name}
@@ -129,18 +161,16 @@ const Works = () => {
       </div>
 
       <div className="mt-12 flex flex-wrap gap-7">
-        {projects
-          .filter((project) => project.category.includes(category))
-          .map((project, index) => (
-            <ProjectCard
-              key={`project-${index}-${category}`}
-              index={index}
-              {...project}
-            />
-          ))}
+        {filteredProjects.map((project, index) => (
+          <ProjectCard
+            key={`${project.name}-${category}`}
+            index={index}
+            {...project}
+          />
+        ))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "work");
+export default SectionWrapper(Works, "projects");

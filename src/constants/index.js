@@ -1,24 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
 import {
-  bootstrap,
   mobile,
   backend,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  java,
-  postgresql,
-  tailwind,
-  mongodb,
-  git,
-  docker,
   relead,
-  angularjs,
   creator,
   admin_dashboard,
   news_app_showcase,
@@ -35,8 +19,16 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "experience",
+    title: "Experience",
+  },
+  {
+    id: "homelab",
+    title: "Homelab",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -63,60 +55,108 @@ const services = [
   },
 ];
 
-const technologies = [
+const techCategories = [
   {
-    name: "HTML 5",
-    icon: html,
+    title: "Programming Languages",
+    items: [
+      { name: "Java", icon: "https://cdn.simpleicons.org/openjdk/ED8B00" },
+      { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
+      { name: "Kotlin", icon: "https://cdn.simpleicons.org/kotlin/7F52FF" },
+      { name: "Rust", icon: "https://cdn.simpleicons.org/rust/FFFFFF" },
+      {
+        name: "JavaScript",
+        icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.simpleicons.org/typescript/3178C6",
+      },
+    ],
   },
   {
-    name: "CSS 3",
-    icon: css,
+    title: "Web Frontend",
+    items: [
+      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
+      { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6" },
+      { name: "Angular", icon: "https://cdn.simpleicons.org/angular/DD0031" },
+      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/FFFFFF" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
+      },
+      { name: "Sass", icon: "https://cdn.simpleicons.org/sass/CC6699" },
+      {
+        name: "Socket.io",
+        icon: "https://cdn.simpleicons.org/socketdotio/FFFFFF",
+      },
+    ],
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    title: "Backend and APIs",
+    items: [
+      {
+        name: "Spring Boot",
+        icon: "https://cdn.simpleicons.org/springboot/6DB33F",
+      },
+      { name: "FastAPI", icon: "https://cdn.simpleicons.org/fastapi/009688" },
+      {
+        name: "Apache Kafka",
+        icon: "https://cdn.simpleicons.org/apachekafka/FFFFFF",
+      },
+      { name: "RabbitMQ", icon: "https://cdn.simpleicons.org/rabbitmq/FF6600" },
+      { name: "JWT", icon: "https://cdn.simpleicons.org/jsonwebtokens/FFFFFF" },
+      { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2D3748" },
+    ],
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    title: "Mobile Development",
+    items: [
+      { name: "Flutter", icon: "https://cdn.simpleicons.org/flutter/02569B" },
+      { name: "Android", icon: "https://cdn.simpleicons.org/android/3DDC84" },
+    ],
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    title: "Databases",
+    items: [
+      {
+        name: "PostgreSQL",
+        icon: "https://cdn.simpleicons.org/postgresql/316192",
+      },
+      {
+        name: "Oracle",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+      },
+      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/4EA94B" },
+    ],
   },
   {
-    name: "Angular",
-    icon: angularjs,
+    title: "DevOps, Cloud and Infrastructure",
+    items: [
+      { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
+      { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
+      { name: "NGINX", icon: "https://cdn.simpleicons.org/nginx/009639" },
+      { name: "AWS", icon: "https://skillicons.dev/icons?i=aws" },
+      { name: "Azure", icon: "https://skillicons.dev/icons?i=azure" },
+      { name: "Git", icon: "https://cdn.simpleicons.org/git/F05033" },
+      {
+        name: "Arch Linux",
+        icon: "https://cdn.simpleicons.org/archlinux/1793D1",
+      },
+      { name: "Bash", icon: "https://cdn.simpleicons.org/gnubash/4EAA25" },
+      { name: "Zsh", icon: "https://cdn.simpleicons.org/gnu/FFFFFF" },
+    ],
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Bootstrap CSS",
-    icon: bootstrap,
-  },
-  {
-    name: "Java",
-    icon: java,
-  },
-  {
-    name: "Postgresql",
-    icon: postgresql,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "docker",
-    icon: docker,
+    title: "Tools and Documentation",
+    items: [
+      { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
+      { name: "LaTeX", icon: "https://cdn.simpleicons.org/latex/008080" },
+    ],
   },
 ];
+
+const technologies = techCategories.flatMap((category) => category.items);
 
 const experiences = [
   {
@@ -140,32 +180,70 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
+const homelabServices = {
+  internal: [
+    { name: "Jellyfin", category: "Media", status: "Private" },
+    { name: "Jellyseerr", category: "Media", status: "Private" },
+    { name: "jellytags", category: "Media", status: "Private" },
+    { name: "Sonarr", category: "Arr Stack", status: "Private" },
+    { name: "Radarr", category: "Arr Stack", status: "Private" },
+    { name: "Prowlarr", category: "Arr Stack", status: "Private" },
+    { name: "Bazarr", category: "Arr Stack", status: "Private" },
+    { name: "Tdarr", category: "Media Automation", status: "Private" },
+    { name: "qBittorrent", category: "Media Automation", status: "Private" },
+    { name: "Maintainerr", category: "Media Automation", status: "Private" },
+    { name: "Pi-hole", category: "Network", status: "Private" },
+    { name: "Excalidraw", category: "Draw and Docs", status: "Private" },
+    { name: "Draw.io", category: "Draw and Docs", status: "Private" },
+    { name: "OpenWebUI", category: "AI", status: "Private" },
+    { name: "Nextcloud", category: "Cloud", status: "Private" },
+    { name: "n8n", category: "Automation", status: "Private" },
+    { name: "IT-Tools", category: "Development", status: "Private" },
+  ],
+  public: [
+    {
+      name: "Homepage",
+      url: "https://home.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "Jellyfin",
+      url: "https://jellyfin.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "Jellyseerr",
+      url: "https://jellyseerr.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "Excalidraw",
+      url: "https://excalidraw.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "Draw.io",
+      url: "https://drawio.achrafyoussef.tech/",
+      status: "Online",
+    },
+    { name: "n8n", url: "https://n8n.achrafyoussef.tech/", status: "Online" },
+    {
+      name: "OpenWebUI",
+      url: "https://ai.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "Nextcloud",
+      url: "https://cloud.achrafyoussef.tech/",
+      status: "Online",
+    },
+    {
+      name: "IT-Tools",
+      url: "https://tools.achrafyoussef.tech/",
+      status: "Online",
+    },
+  ],
+};
 
 const projects = [
   {
@@ -198,7 +276,7 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    category: ["All", "Academic Projects", "Desktop"],
+    category: ["Academic Projects", "Desktop"],
     image: admin_dashboard,
     source_code_link:
       "https://github.com/ACHRAF-YOUSSEF/Mini-Projet-Java-GestionDeStock",
@@ -221,7 +299,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    category: ["All", "Academic Projects", "Mobile"],
+    category: ["Academic Projects", "Mobile"],
     image: news_app_showcase,
     source_code_link:
       "https://github.com/ACHRAF-YOUSSEF/news-reader-mobile-app",
@@ -252,7 +330,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    category: ["All", "Academic Projects", "Web"],
+    category: ["Academic Projects", "Web"],
     image: artflix_showcase,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/projet-fidere-Artflix",
   },
@@ -282,7 +360,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    category: ["All", "Academic Projects", "Web"],
+    category: ["Academic Projects", "Web"],
     image: anime_store_showcase,
     source_code_link:
       "https://github.com/ACHRAF-YOUSSEF/projet-tp-genie-logiciel",
@@ -313,7 +391,7 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    category: ["All", "Academic Projects", "Web"],
+    category: ["Academic Projects", "Web"],
     image: netflix_clone,
     source_code_link:
       "https://github.com/ACHRAF-YOUSSEF/mini-projet-angular-netflix-clone",
@@ -340,7 +418,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    category: ["All", "Personal Projects", "Mobile"],
+    category: ["Personal Projects", "Mobile"],
     image: mangatn_showcase,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/MangaTN",
   },
@@ -362,10 +440,17 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    category: ["All", "Personal Projects", "Mobile"],
+    category: ["Personal Projects", "Mobile"],
     image: tmdb_showcase,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/mtrak",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  techCategories,
+  technologies,
+  experiences,
+  homelabServices,
+  projects,
+};
