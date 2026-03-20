@@ -7,18 +7,30 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
-  const isWorkInProgress = tags.some(
-    (tag) => normalizeCategory(tag.name) === "in progress"
-  );
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, status }) => {
+  const isWorkInProgress =
+    normalizeCategory(status) === "wip" ||
+    tags.some((tag) => normalizeCategory(tag.name) === "in progress");
 
   return (
     <motion.article
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
       initial="hidden"
       animate="show"
-      className="shell-card p-5 sm:w-[360px] w-full"
+      className="shell-card p-5 sm:w-[360px] w-full relative"
     >
+      {isWorkInProgress && (
+        <div className="absolute top-0 left-4 z-20 group">
+          <div className="bg-[#1c7ea4] text-[#eaf8ff] text-[11px] font-semibold px-3 py-1 rounded-b-md shadow-[0_0_14px_rgba(54,179,226,0.35)]">
+            WIP
+          </div>
+          <div className="mx-auto w-0 h-0 border-l-[10px] border-r-[10px] border-t-[8px] border-l-transparent border-r-transparent border-t-[#1c7ea4]" />
+          <div className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-[#66c7ef57] bg-[#0a1626f0] px-2 py-1 text-[11px] text-slate-200 opacity-0 transition group-hover:opacity-100 hidden sm:block">
+            Work in progress - features are still being built
+          </div>
+        </div>
+      )}
+
       <div className="relative w-full h-[220px]">
         {image ? (
           <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
@@ -26,11 +38,6 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           <div className="w-full h-full rounded-xl border border-[#66c7ef57] bg-[radial-gradient(circle_at_20%_20%,rgba(35,80,120,0.6),rgba(10,18,32,0.95))] p-4 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="terminal-chip">prototype</span>
-              {isWorkInProgress && (
-                <span className="rounded-full border border-[#e2c86d5f] bg-[#e2c86d1a] px-2 py-0.5 text-[11px] text-[#f0dc96]">
-                  Work In Progress
-                </span>
-              )}
             </div>
 
             <div className="mono text-[#c6d6e8] text-sm leading-6">
@@ -57,6 +64,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
       <div className="mt-5">
         <h3 className="text-slate-100 font-bold text-[24px]">{name}</h3>
+        {isWorkInProgress && (
+          <p className="mt-1 text-[12px] text-[#9bd5ef] sm:hidden">Work in progress</p>
+        )}
         <p className="mt-2 text-slate-400 text-[14px]">{description}</p>
       </div>
 

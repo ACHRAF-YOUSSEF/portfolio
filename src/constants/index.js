@@ -304,29 +304,38 @@ const homelabServices = {
 
 const projects = [
   {
-    name: "Discord Clone (In Progress)",
+    name: "BizCord",
     description:
-      "Academic project focused on reproducing core Discord collaboration features with real-time messaging and structured channels.",
+      "Plateforme de communication professionnelle en temps reel.",
     tags: [
       {
-        name: "In Progress",
-        color: "green-text-gradient",
+        name: "Angular v21",
+        color: "orange-text-gradient",
       },
       {
-        name: "Academic",
+        name: "Spring Boot",
         color: "blue-text-gradient",
       },
       {
-        name: "Full Stack",
+        name: "PostgreSQL",
         color: "orange-text-gradient",
       },
+      {
+        name: "Tailwind CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebSockets",
+        color: "pink-text-gradient",
+      },
     ],
+    status: "wip",
     category: ["Academic Projects", "Web"],
     image: null,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF",
   },
   {
-    name: "Password Manager Mobile App (In Progress)",
+    name: "Password Manager Mobile App",
     description:
       "Academic mobile project for secure credential management with encrypted storage and clean user flows.",
     tags: [
@@ -343,12 +352,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    status: "wip",
     category: ["Academic Projects", "Mobile"],
     image: null,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF",
   },
   {
-    name: "Music Mobile App (In Progress)",
+    name: "Music Mobile App",
     description:
       "Academic mobile application exploring media browsing and playback with a practical, user-first interface.",
     tags: [
@@ -365,6 +375,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
+    status: "wip",
     category: ["Academic Projects", "Mobile"],
     image: null,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF",
