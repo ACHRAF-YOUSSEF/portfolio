@@ -60,7 +60,7 @@ const Contact = () => {
         "template_dmuxt8k",
         {
           from_name: form.name,
-          to_name: "Achrafyoussef",
+          to_name: "Achraf youssef",
           from_email: form.email,
           to_email: "yachraf403@gmail.com",
           message: form.message,
