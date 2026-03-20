@@ -4,32 +4,32 @@ import { styles } from "../styles";
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[calc(100vh-82px)] mx-auto flex items-center">
-      <div className={`${styles.paddingX} max-w-7xl mx-auto w-full py-12`}>
-        <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-8 items-center">
-          <div className="space-y-6">
+    <section className="relative w-full min-h-[calc(100vh-82px)] mx-auto flex items-center py-8 sm:py-12">
+      <div className={`${styles.paddingX} max-w-7xl mx-auto w-full`}>
+        <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-6 lg:gap-10 items-center">
+          <div className="space-y-5 sm:space-y-6">
             <span className="terminal-chip">[achraf@archlinux ~]$ whoami</span>
             <h1 className={styles.heroHeadText}>
-              Software engineer with a
-              <span className="text-[#67c6f0]"> Linux-first </span>
+              Software engineer with a {" "}
+              <span className="text-[#67c6f0]">Linux-first</span>{" "}
               builder mindset.
             </h1>
-            <p className={`${styles.heroSubText} max-w-2xl`}>
+            <p className={`${styles.heroSubText} max-w-2xl text-slate-300/95`}>
               I design practical apps across web, mobile, and backend systems.
               Clean architecture, automation, and self-hosted workflows are my
               daily tools.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <a
                 href="#projects"
-                className="arch-button rounded-xl px-6 py-3 font-semibold"
+                className="arch-button inline-flex items-center justify-center rounded-xl px-5 sm:px-6 py-2.5 sm:py-3 font-semibold no-underline"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
-                className="rounded-xl border border-[#5bbfe85e] px-6 py-3 text-slate-200 hover:bg-[#17335061]"
+                className="inline-flex items-center justify-center rounded-xl border border-[#5bbfe85e] px-5 sm:px-6 py-2.5 sm:py-3 text-slate-200 hover:bg-[#17335061] no-underline transition"
               >
                 Let&apos;s Build
               </a>
@@ -40,7 +40,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="shell-card p-5"
+            className="shell-card p-4 sm:p-5"
           >
             <div className="flex items-center justify-between border-b border-[#55bae041] pb-3">
               <p className="mono text-sm text-[#9fd8f3]">terminal</p>
@@ -68,7 +68,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 w-full flex justify-center items-center">
+      <div className="absolute bottom-4 sm:bottom-6 w-full hidden sm:flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#4fb3df81] flex justify-center items-start p-2">
             <motion.div

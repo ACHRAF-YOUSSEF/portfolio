@@ -13,7 +13,7 @@ const Navbar = () => {
     <nav
       className="w-full sticky top-0 z-30 backdrop-blur-md bg-slate-950/55 border-b border-[#4aaedb3f]"
     >
-      <div className="sm:px-16 px-6 py-4 w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="sm:px-16 px-5 py-3.5 sm:py-4 w-full flex justify-between items-center max-w-7xl mx-auto gap-3">
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="w-9 h-9 rounded-full border border-[#5bc0eb6b] bg-[#0d2033] grid place-items-center mono text-[#7fd0f4] text-sm">
             $&gt;
           </div>
-          <p className="text-slate-100 text-[18px] font-bold cursor-pointer flex">
+          <p className="text-slate-100 text-[15px] xs:text-[16px] sm:text-[18px] font-bold cursor-pointer truncate max-w-[150px] xs:max-w-none">
             Achraf Youssef
           </p>
           <span className="hidden md:inline terminal-chip">arch-dev</span>
@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <button
             type="button"
-            className="p-1"
+            className="p-1.5 rounded-md border border-[#4aaedb3f] bg-[#0d203380]"
             aria-label="Toggle menu"
             onClick={() => setToggle(!toggle)}
           >
