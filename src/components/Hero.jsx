@@ -80,6 +80,14 @@ const Hero = () => {
               >
                 Let&apos;s Build
               </a>
+              <a
+                href="/portfolio/cv.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-xl border border-[#64c8f077] px-5 sm:px-6 py-2.5 sm:py-3 text-[#cdefff] hover:bg-[#1a3f6170] no-underline transition"
+              >
+                Open CV
+              </a>
             </div>
           </div>
 

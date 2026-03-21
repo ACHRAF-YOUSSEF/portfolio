@@ -137,6 +137,12 @@ const Contact = () => {
                 href="https://linkedin.com/in/achraf-youssef-4768b1251"
                 isLink
               />
+              <ContactInfo
+                label="cv"
+                value="open resume"
+                href="/portfolio/cv.pdf"
+                isLink
+              />
             </div>
           </div>
         </motion.div>
