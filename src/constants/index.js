@@ -340,15 +340,23 @@ const projects = [
       "Academic mobile project for secure credential management with encrypted storage and clean user flows.",
     tags: [
       {
-        name: "In Progress",
-        color: "green-text-gradient",
+        name: "Kotlin",
+        color: "orange-text-gradient",
       },
       {
-        name: "Academic",
+        name: "Jetpack Compose",
         color: "blue-text-gradient",
       },
       {
-        name: "Mobile",
+        name: "AndroidX Vault",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Room DB",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Biometrics",
         color: "pink-text-gradient",
       },
     ],
@@ -363,15 +371,31 @@ const projects = [
       "Academic mobile application exploring media browsing and playback with a practical, user-first interface.",
     tags: [
       {
-        name: "In Progress",
-        color: "green-text-gradient",
+        name: "Kotlin",
+        color: "orange-text-gradient",
       },
       {
-        name: "Academic",
+        name: "Jetpack Compose",
         color: "blue-text-gradient",
       },
       {
-        name: "Mobile",
+        name: "Room DB",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Firebase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebSockets",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Online/Offline Sync",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Offline Downloads",
         color: "pink-text-gradient",
       },
     ],
