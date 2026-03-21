@@ -1,37 +1,42 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react-refresh/only-export-components */
+import { Suspense, lazy } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "./components";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+
+const Education = lazy(() => import("./components/Education"));
+const Experience = lazy(() => import("./components/Experience"));
+const Tech = lazy(() => import("./components/Tech"));
+const Homelab = lazy(() => import("./components/Homelab"));
+const Works = lazy(() => import("./components/Works"));
+const Contact = lazy(() => import("./components/Contact"));
+
+const SectionFallback = () => (
+  <section className="max-w-7xl mx-auto px-6 sm:px-16 py-12 text-slate-400">
+    Loading...
+  </section>
+);
 
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
+      <div className="site-shell">
+        <div className="site-glow site-glow-left" />
+        <div className="site-glow site-glow-right" />
+        <Navbar />
+        <main>
           <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        {/* <Feedbacks /> */}
-        <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
-        </div>
+          <About />
+          <Suspense fallback={<SectionFallback />}>
+            <Education />
+            <Experience />
+            <Tech />
+            <Homelab />
+            <Works />
+            <Contact />
+          </Suspense>
+        </main>
       </div>
     </BrowserRouter>
   );
