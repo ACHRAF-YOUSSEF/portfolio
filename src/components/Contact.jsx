@@ -133,8 +133,8 @@ const Contact = () => {
               />
               <ContactInfo
                 label="linkedin"
-                value="achraf-youssef-4768b1251"
-                href="https://linkedin.com/in/achraf-youssef-4768b1251"
+                value="achraf-youssef"
+                href="https://linkedin.com/in/achraf-youssef"
                 isLink
               />
               <ContactInfo
