@@ -78,7 +78,7 @@ const Navbar = () => {
           <span className="hidden md:inline terminal-chip">arch</span>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-3">
+        <ul className="list-none hidden lg:flex flex-row gap-3">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -99,7 +99,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <button
             type="button"
             className="p-1.5 rounded-md border border-[#4aaedb3f] bg-[#0d203380]"
