@@ -12,6 +12,7 @@ import {
   netflix_clone,
   vaultkeeper_showcase,
   serenade_showcase,
+  bizcord_showcase,
 } from "../assets";
 
 export const navLinks = [
@@ -337,7 +338,7 @@ const projects = [
       },
     ],
     category: ["Academic Projects", "Full-Stack", "Web", "Real-Time"],
-    image: null,
+    image: bizcord_showcase,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/bizcord",
   },
   {

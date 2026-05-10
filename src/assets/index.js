@@ -31,8 +31,10 @@ import mangatn_showcase from "/projects_images/mangatn/showcase.png";
 import netflix_clone from "/projects_images/netflix clone/netflix_clone.jpeg";
 import vaultkeeper_showcase from "/projects_images/vaultkeeper/showcase.png";
 import serenade_showcase from "/projects_images/serenade/showcase.png";
+import bizcord_showcase from "/projects_images/bizcord/showcase.png";
 
 export {
+  bizcord_showcase,
   serenade_showcase,
   vaultkeeper_showcase,
   bootstrap,
