@@ -22,7 +22,7 @@ import bootstrap from "./tech/bootstrap.svg";
 
 import relead from "./company/logo-relead-aligned.png";
 
-import admin_dashboard from "/projects_images/gestion_de_stock/admin dashboard.png";
+import admin_dashboard from "/projects_images/gestion_de_stock/showcase.png";
 import news_app_showcase from "/projects_images/news_app/showcase.png";
 import artflix_showcase from "/projects_images/artflix/artflix.jpeg";
 import anime_store_showcase from "/projects_images/anime_store/anime_store.jpeg";
