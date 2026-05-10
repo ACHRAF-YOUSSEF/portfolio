@@ -26,8 +26,8 @@ import admin_dashboard from "/projects_images/gestion_de_stock/admin dashboard.p
 import news_app_showcase from "/projects_images/news_app/showcase.png";
 import artflix_showcase from "/projects_images/artflix/artflix.jpeg";
 import anime_store_showcase from "/projects_images/anime_store/anime_store.jpeg";
-import tmdb_showcase from "/projects_images/tmdb/tmdb.png";
-import mangatn_showcase from "/projects_images/mangatn/mangatn.png";
+import tmdb_showcase from "/projects_images/tmdb/showcase.png";
+import mangatn_showcase from "/projects_images/mangatn/showcase.png";
 import netflix_clone from "/projects_images/netflix clone/netflix_clone.jpeg";
 import vaultkeeper_showcase from "/projects_images/vaultkeeper/showcase.png";
 import serenade_showcase from "/projects_images/serenade/showcase.png";
