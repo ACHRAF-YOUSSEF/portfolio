@@ -10,6 +10,8 @@ import {
   tmdb_showcase,
   mangatn_showcase,
   netflix_clone,
+  vaultkeeper_showcase,
+  serenade_showcase,
 } from "../assets";
 
 export const navLinks = [
@@ -296,7 +298,7 @@ const homelabServices = {
 };
 
 const projects = [
-   {
+  {
     name: "BizCord",
     description:
       "Plateforme de communication d'équipe auto-hebergee inspiree de Discord, avec serveurs, salons texte, messages directs en temps reel, appels audio/video WebRTC, partage d'ecran, invitations, roles, notifications, recherche, fichiers et evenements.",
@@ -369,7 +371,7 @@ const projects = [
       },
     ],
     category: ["Academic Projects", "Mobile", "Android"],
-    image: null,
+    image: vaultkeeper_showcase,
     source_code_link: "https://github.com/SirineZanina/vaultkeeper",
   },
   {
@@ -393,7 +395,7 @@ const projects = [
       { name: "Docker", color: "green-text-gradient" },
     ],
     category: ["Academic Projects", "Mobile", "Full Stack"],
-    image: null,
+    image: serenade_showcase,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/serenade",
   },
   {

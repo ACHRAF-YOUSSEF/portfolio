@@ -29,8 +29,12 @@ import anime_store_showcase from "/projects_images/anime_store/anime_store.jpeg"
 import tmdb_showcase from "/projects_images/tmdb/tmdb.png";
 import mangatn_showcase from "/projects_images/mangatn/mangatn.png";
 import netflix_clone from "/projects_images/netflix clone/netflix_clone.jpeg";
+import vaultkeeper_showcase from "/projects_images/vaultkeeper/showcase.png";
+import serenade_showcase from "/projects_images/serenade/showcase.png";
 
 export {
+  serenade_showcase,
+  vaultkeeper_showcase,
   bootstrap,
   relead,
   netflix_clone,
