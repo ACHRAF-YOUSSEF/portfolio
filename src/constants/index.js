@@ -296,32 +296,45 @@ const homelabServices = {
 };
 
 const projects = [
-  {
+   {
     name: "BizCord",
-    description: "Plateforme de communication professionnelle en temps reel.",
+    description:
+      "Plateforme de communication d'équipe auto-hebergee inspiree de Discord, avec serveurs, salons texte, messages directs en temps reel, appels audio/video WebRTC, partage d'ecran, invitations, roles, notifications, recherche, fichiers et evenements.",
     tags: [
       {
-        name: "Angular v21",
+        name: "Angular 21",
         color: "orange-text-gradient",
       },
       {
-        name: "Spring Boot",
+        name: "Spring Boot 4",
         color: "blue-text-gradient",
       },
       {
         name: "PostgreSQL",
-        color: "orange-text-gradient",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebSockets / STOMP",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "WebRTC / mediasoup",
+        color: "green-text-gradient",
       },
       {
         name: "Tailwind CSS",
         color: "green-text-gradient",
       },
       {
-        name: "WebSockets",
-        color: "pink-text-gradient",
+        name: "MinIO",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Docker Compose",
+        color: "blue-text-gradient",
       },
     ],
-    category: ["Academic Projects", "Web"],
+    category: ["Academic Projects", "Full-Stack", "Web", "Real-Time"],
     image: null,
     source_code_link: "https://github.com/ACHRAF-YOUSSEF/bizcord",
   },
