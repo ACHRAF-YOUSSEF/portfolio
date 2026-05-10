@@ -166,7 +166,8 @@ const technologies = techCategories.flatMap((category) => category.items);
 const education = [
   {
     degree: "Master of Engineering, Telecommunications Engineering",
-    school: "Higher Institute of Computer Science and Communication Technologies",
+    school:
+      "Higher Institute of Computer Science and Communication Technologies",
     date: "Sep 2024 – Sep 2027",
     details: [
       "Engineering cycle focused on telecommunications engineering and advanced software systems.",
@@ -176,7 +177,8 @@ const education = [
   },
   {
     degree: "Bachelor of Engineering, Computer Science",
-    school: "Higher Institute of Computer Science and Communication Techniques – Hammam Sousse",
+    school:
+      "Higher Institute of Computer Science and Communication Techniques – Hammam Sousse",
     date: "Sep 2021 – Jun 2024",
     details: [
       "Completed undergraduate engineering studies in computer science.",
@@ -296,8 +298,7 @@ const homelabServices = {
 const projects = [
   {
     name: "BizCord",
-    description:
-      "Plateforme de communication professionnelle en temps reel.",
+    description: "Plateforme de communication professionnelle en temps reel.",
     tags: [
       {
         name: "Angular v21",
@@ -320,13 +321,12 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    status: "wip",
     category: ["Academic Projects", "Web"],
     image: null,
-    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF/bizcord",
   },
   {
-    name: "Password Manager Mobile App",
+    name: "VaultKeeper",
     description:
       "Academic mobile project for secure credential management with encrypted storage and clean user flows.",
     tags: [
@@ -346,54 +346,34 @@ const projects = [
         name: "Room DB",
         color: "pink-text-gradient",
       },
-      {
-        name: "Biometrics",
-        color: "pink-text-gradient",
-      },
     ],
-    status: "wip",
     category: ["Academic Projects", "Mobile"],
     image: null,
-    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+    source_code_link: "https://github.com/SirineZanina/vaultkeeper",
   },
   {
-    name: "Music Mobile App",
+    name: "Serenade",
     description:
-      "Academic mobile application exploring media browsing and playback with a practical, user-first interface.",
+      "Full-stack music streaming app with an offline-first Android client, secure Spring Boot backend, and Python media workers. Serenade supports browsing, search, playlists, ratings, uploads, HLS playback, offline downloads, persisted playback queues, email verification, and AI-generated subtitles through an async RabbitMQ pipeline using FFmpeg, MinIO, and faster-whisper.",
     tags: [
-      {
-        name: "Kotlin",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Jetpack Compose",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Room DB",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "WebSockets",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Online/Offline Sync",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Offline Downloads",
-        color: "pink-text-gradient",
-      },
+      { name: "Kotlin", color: "orange-text-gradient" },
+      { name: "Jetpack Compose", color: "blue-text-gradient" },
+      { name: "Media3", color: "green-text-gradient" },
+      { name: "Room DB", color: "pink-text-gradient" },
+      { name: "WorkManager", color: "blue-text-gradient" },
+      { name: "Spring Boot", color: "green-text-gradient" },
+      { name: "PostgreSQL", color: "pink-text-gradient" },
+      { name: "RabbitMQ", color: "green-text-gradient" },
+      { name: "Python", color: "orange-text-gradient" },
+      { name: "FastAPI", color: "blue-text-gradient" },
+      { name: "FFmpeg", color: "orange-text-gradient" },
+      { name: "MinIO", color: "blue-text-gradient" },
+      { name: "Redis", color: "pink-text-gradient" },
+      { name: "Docker", color: "green-text-gradient" },
     ],
-    status: "wip",
-    category: ["Academic Projects", "Mobile"],
+    category: ["Academic Projects", "Mobile", "Full Stack"],
     image: null,
-    source_code_link: "https://github.com/ACHRAF-YOUSSEF",
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF/serenade",
   },
   {
     name: "Inventory management",
