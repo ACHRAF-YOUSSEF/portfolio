@@ -234,39 +234,15 @@ const experiences = [
 ];
 
 const homelabServices = {
-  internal: [
-    { name: "Jellyfin", category: "Media", status: "Private" },
-    { name: "Jellyseerr", category: "Media", status: "Private" },
-    { name: "jellytags", category: "Media", status: "Private" },
-    { name: "Sonarr", category: "Arr Stack", status: "Private" },
-    { name: "Radarr", category: "Arr Stack", status: "Private" },
-    { name: "Prowlarr", category: "Arr Stack", status: "Private" },
-    { name: "Bazarr", category: "Arr Stack", status: "Private" },
-    { name: "Tdarr", category: "Media Automation", status: "Private" },
-    { name: "qBittorrent", category: "Media Automation", status: "Private" },
-    { name: "Maintainerr", category: "Media Automation", status: "Private" },
-    { name: "Pi-hole", category: "Network", status: "Private" },
-    { name: "Excalidraw", category: "Draw and Docs", status: "Private" },
-    { name: "Draw.io", category: "Draw and Docs", status: "Private" },
-    { name: "OpenWebUI", category: "AI", status: "Private" },
-    { name: "Nextcloud", category: "Cloud", status: "Private" },
-    { name: "n8n", category: "Automation", status: "Private" },
-    { name: "IT-Tools", category: "Development", status: "Private" },
-  ],
   public: [
     {
-      name: "Homepage",
+      name: "Homarr",
       url: "https://home.achrafyoussef.tech/",
       status: "Online",
     },
     {
       name: "Jellyfin",
       url: "https://jellyfin.achrafyoussef.tech/",
-      status: "Online",
-    },
-    {
-      name: "Jellyseerr",
-      url: "https://jellyseerr.achrafyoussef.tech/",
       status: "Online",
     },
     {
@@ -279,20 +255,24 @@ const homelabServices = {
       url: "https://drawio.achrafyoussef.tech/",
       status: "Online",
     },
-    { name: "n8n", url: "https://n8n.achrafyoussef.tech/", status: "Online" },
+    { 
+      name: "n8n",
+      url: "https://n8n.achrafyoussef.tech/",
+      status: "Online" 
+    },
     {
       name: "OpenWebUI",
       url: "https://ai.achrafyoussef.tech/",
       status: "Online",
     },
     {
-      name: "Nextcloud",
-      url: "https://cloud.achrafyoussef.tech/",
+      name: "IT-Tools",
+      url: "https://tools.achrafyoussef.tech/",
       status: "Online",
     },
     {
-      name: "IT-Tools",
-      url: "https://tools.achrafyoussef.tech/",
+      name: "StirlingPDF",
+      url: "https://stirlingpdf.achrafyoussef.tech/",
       status: "Online",
     },
   ],
