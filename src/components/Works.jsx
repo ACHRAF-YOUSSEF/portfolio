@@ -31,11 +31,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         </div>
       )}
 
-      <div className="relative w-full h-[220px]">
+      <div className="relative w-full aspect-[18/11] overflow-hidden rounded-xl">
         {image ? (
-          <img src={image} alt={name} className="w-full h-full object-cover rounded-xl" />
+          <img src={image} alt={name} className="w-full h-full object-cover" />
         ) : (
-          <div className="w-full h-full rounded-xl border border-[#66c7ef57] bg-[radial-gradient(circle_at_20%_20%,rgba(35,80,120,0.6),rgba(10,18,32,0.95))] p-4 flex flex-col justify-between">
+          <div className="w-full h-full border border-[#66c7ef57] bg-[radial-gradient(circle_at_20%_20%,rgba(35,80,120,0.6),rgba(10,18,32,0.95))] p-4 flex flex-col justify-between">
             <div className="flex items-center justify-between">
               <span className="terminal-chip">prototype</span>
             </div>
