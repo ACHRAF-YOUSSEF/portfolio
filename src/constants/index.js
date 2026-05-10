@@ -328,7 +328,7 @@ const projects = [
   {
     name: "VaultKeeper",
     description:
-      "Academic mobile project for secure credential management with encrypted storage and clean user flows.",
+      "Academic Android password manager built with Kotlin and Jetpack Compose, featuring master-password authentication, AES-GCM encrypted vault storage, Room persistence, password generation, and clean CRUD flows for logins, secure notes, cards, and identities.",
     tags: [
       {
         name: "Kotlin",
@@ -339,15 +339,23 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "AndroidX Vault",
+        name: "Room DB",
         color: "green-text-gradient",
       },
       {
-        name: "Room DB",
+        name: "Hilt",
         color: "pink-text-gradient",
       },
+      {
+        name: "DataStore",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "AES-GCM/PBKDF2",
+        color: "green-text-gradient",
+      },
     ],
-    category: ["Academic Projects", "Mobile"],
+    category: ["Academic Projects", "Mobile", "Android"],
     image: null,
     source_code_link: "https://github.com/SirineZanina/vaultkeeper",
   },
