@@ -353,7 +353,7 @@ const projects = [
     ],
     category: ["Academic Projects", "Mobile", "Android"],
     image: vaultkeeper_showcase,
-    source_code_link: "https://github.com/SirineZanina/vaultkeeper",
+    source_code_link: "https://github.com/ACHRAF-YOUSSEF/vaultkeeper",
   },
   {
     name: "Serenade",
