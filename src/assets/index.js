@@ -1,10 +1,10 @@
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import backend from "./roles/backend.png";
+import creator from "./roles/creator.png";
+import mobile from "./roles/mobile.png";
+import web from "./roles/web.png";
+import github from "./ui/github.png";
+import menu from "./ui/menu.svg";
+import close from "./ui/close.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
