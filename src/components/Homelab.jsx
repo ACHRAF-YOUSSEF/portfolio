@@ -166,7 +166,7 @@ const Homelab = () => {
             </div>
 
             <ol
-              className="relative grid grid-cols-2 gap-5 sm:grid-cols-5"
+              className="relative grid grid-cols-2 gap-5 sm:grid-cols-5 sm:gap-x-0"
               aria-label="Public request path through the homelab"
             >
               {architectureStages.map(([name, detail]) => (
