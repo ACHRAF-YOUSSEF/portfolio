@@ -121,8 +121,7 @@ const Homelab = () => {
       >
         <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#58b8e633] bg-[#0f1d2f]/80 px-5 py-4 sm:px-7">
           <p className="mono text-sm text-slate-300">
-            <span className="text-[#a6e22e]">$</span> trace request --to
-            homelab
+            <span className="text-[#a6e22e]">$</span> trace request --to homelab
           </p>
           <span className="terminal-chip whitespace-nowrap">30+ services</span>
         </div>
@@ -134,7 +133,7 @@ const Homelab = () => {
               aria-hidden="true"
             >
               <motion.span
-                className="absolute -top-1.5 z-10 block size-3 -translate-x-1/2 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
+                className="absolute -top-2 z-20 block size-4 -translate-x-1/2 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
                 animate={{
                   left: [
                     "0%",
@@ -158,15 +157,15 @@ const Homelab = () => {
                   ease: "easeInOut",
                   repeat: Infinity,
                   times: [
-                    0, 0.08, 0.2, 0.28, 0.4, 0.48, 0.6, 0.68, 0.8, 0.88,
-                    0.92, 0.93, 1,
+                    0, 0.08, 0.2, 0.28, 0.4, 0.48, 0.6, 0.68, 0.8, 0.88, 0.92,
+                    0.93, 1,
                   ],
                 }}
               />
             </div>
 
             <ol
-              className="relative grid grid-cols-2 gap-5 sm:grid-cols-5 sm:gap-x-0"
+              className="relative grid grid-cols-2 gap-5 sm:grid-cols-[repeat(5,20%)] sm:gap-x-0"
               aria-label="Public request path through the homelab"
             >
               {architectureStages.map(([name, detail]) => (
@@ -195,8 +194,8 @@ const Homelab = () => {
             <p className="mono text-sm text-[#58b8e6]">The stack</p>
             <h3 className="mt-2 text-3xl font-bold text-slate-100">homelab</h3>
             <p className="mt-3 max-w-lg leading-7 text-slate-300">
-              A privacy-first Docker Compose platform that turns one host into
-              a personal cloud, media system, automation engine, and local AI
+              A privacy-first Docker Compose platform that turns one host into a
+              personal cloud, media system, automation engine, and local AI
               environment.
             </p>
 
