@@ -134,9 +134,34 @@ const Homelab = () => {
               aria-hidden="true"
             >
               <motion.span
-                className="absolute -top-1.5 block size-3 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
-                animate={{ left: ["0%", "calc(100% - 0.75rem)"] }}
-                transition={{ duration: 3.2, ease: "linear", repeat: Infinity }}
+                className="absolute -top-1.5 block size-3 -translate-x-1/2 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
+                animate={{
+                  left: [
+                    "0%",
+                    "0%",
+                    "25%",
+                    "25%",
+                    "50%",
+                    "50%",
+                    "75%",
+                    "75%",
+                    "100%",
+                    "100%",
+                    "100%",
+                    "0%",
+                    "0%",
+                  ],
+                  opacity: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1],
+                }}
+                transition={{
+                  duration: 8,
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  times: [
+                    0, 0.08, 0.2, 0.28, 0.4, 0.48, 0.6, 0.68, 0.8, 0.88,
+                    0.92, 0.93, 1,
+                  ],
+                }}
               />
             </div>
 
