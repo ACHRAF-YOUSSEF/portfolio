@@ -135,6 +135,7 @@ const homelabServices = {
     {
       name: "Homarr",
       url: "https://home.achrafyoussef.tech/",
+      healthUrl: "https://home.achrafyoussef.tech/boards/HOMEPAGE",
       status: "Online",
     },
     {
