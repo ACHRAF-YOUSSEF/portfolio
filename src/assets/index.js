@@ -6,6 +6,7 @@ import menu from "./ui/menu.svg";
 import close from "./ui/close.svg";
 
 import relead from "./company/logo-relead-aligned.png";
+import massar from "./company/massar.svg";
 
 import admin_dashboard from "/projects_images/gestion_de_stock/showcase.png";
 import news_app_showcase from "/projects_images/news_app/showcase.png";
@@ -22,6 +23,7 @@ export {
   bizcord_showcase,
   serenade_showcase,
   vaultkeeper_showcase,
+  massar,
   relead,
   netflix_clone,
   mangatn_showcase,

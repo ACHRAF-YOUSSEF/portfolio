@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MASSAR">
+  <g fill="#0105e3" transform="translate(4.875 16.385)">
+    <path d="M0 0v22.98h8.25V8.21h14.77V0H0Z" />
+    <path d="M31.23 8.22v23.01H8.25v-8.25h14.77V8.22h8.21Z" />
+    <path d="M54.25 0v31.23H46V8.22H31.23V0h23.02Z" />
+  </g>
+</svg>

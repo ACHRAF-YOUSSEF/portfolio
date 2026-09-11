@@ -1,6 +1,7 @@
 import {
   mobile,
   backend,
+  massar,
   relead,
   creator,
   admin_dashboard,
@@ -89,10 +90,23 @@ const education = [
 
 const experiences = [
   {
+    title: "Full-Stack & Mobile Developer",
+    company_name: "Massar · Internship",
+    icon: massar,
+    iconBg: "#ffffff",
+    date: "June 2026 - August 2026",
+    points: [
+      "Developed a full-stack web application using React for the frontend and Spring Boot for the backend.",
+      "Built a cross-platform mobile application with Flutter.",
+      "Designed and managed a PostgreSQL database for data persistence.",
+      "Integrated Redis caching for performance optimization and MinIO for object storage.",
+    ],
+  },
+  {
     title: "Engineering Student",
     company_name: "ISITCOM",
     icon: creator,
-    iconBg: "#383E56",
+    iconBg: "#0f2f47",
     date: "2024 - Present",
     points: [
       "Building academic software projects across mobile, desktop, and web tracks.",
@@ -104,7 +118,7 @@ const experiences = [
     title: "Full Stack Engineer",
     company_name: "Relead · Internship",
     icon: relead,
-    iconBg: "#383E56",
+    iconBg: "#0f2f47",
     date: "January 2024 - May 2024",
     points: [
       "Project: Analysis, design, and development of a full-stack web platform (Angular, Spring Boot, MongoDB, Jenkins, GitLab).",
@@ -118,7 +132,7 @@ const experiences = [
     title: "Full Stack Engineer",
     company_name: "Relead · Internship",
     icon: relead,
-    iconBg: "#383E56",
+    iconBg: "#0f2f47",
     date: "June 2023 - August 2023",
     points: [
       "Project: Design and implementation of a secure web platform (Angular, Spring Boot, PostgreSQL, JWT).",
