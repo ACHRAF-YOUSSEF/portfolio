@@ -135,7 +135,6 @@ const Homelab = () => {
             >
               <motion.span
                 className="absolute -top-1.5 block size-3 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
-                initial={false}
                 animate={{ left: ["0%", "calc(100% - 0.75rem)"] }}
                 transition={{ duration: 3.2, ease: "linear", repeat: Infinity }}
               />
