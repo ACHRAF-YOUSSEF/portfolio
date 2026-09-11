@@ -50,7 +50,7 @@ const Homelab = () => {
     const updateStatuses = async () => {
       const checks = await Promise.all(
         homelabServices.public.map(async (service) => {
-          const status = await checkServiceAvailability(service.url);
+          const status = await checkServiceAvailability(service.healthUrl ?? service.url);
           return [service.name, status];
         })
       );

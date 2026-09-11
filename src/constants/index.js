@@ -253,6 +253,7 @@ const homelabServices = {
     { 
       name: "n8n",
       url: "https://n8n.achrafyoussef.tech/",
+      healthUrl: "https://n8n.achrafyoussef.tech/healthz",
       status: "Online" 
     },
     {
