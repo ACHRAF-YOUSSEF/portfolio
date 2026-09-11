@@ -1,10 +1,9 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter } from "react-router-dom";
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import About from "./components/About";
 
+const About = lazy(() => import("./components/About"));
 const Education = lazy(() => import("./components/Education"));
 const Experience = lazy(() => import("./components/Experience"));
 const Tech = lazy(() => import("./components/Tech"));
@@ -20,25 +19,23 @@ const SectionFallback = () => (
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="site-shell">
-        <div className="site-glow site-glow-left" />
-        <div className="site-glow site-glow-right" />
-        <Navbar />
-        <main>
-          <Hero />
+    <div className="site-shell">
+      <div className="site-glow site-glow-left" />
+      <div className="site-glow site-glow-right" />
+      <Navbar />
+      <main>
+        <Hero />
+        <Suspense fallback={<SectionFallback />}>
           <About />
-          <Suspense fallback={<SectionFallback />}>
-            <Education />
-            <Experience />
-            <Tech />
-            <Homelab />
-            <Works />
-            <Contact />
-          </Suspense>
-        </main>
-      </div>
-    </BrowserRouter>
+          <Education />
+          <Experience />
+          <Tech />
+          <Homelab />
+          <Works />
+          <Contact />
+        </Suspense>
+      </main>
+    </div>
   );
 };
 

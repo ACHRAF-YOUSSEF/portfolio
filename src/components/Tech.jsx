@@ -33,6 +33,8 @@ const Tech = () => {
                   <img
                     src={technology.icon}
                     alt={technology.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-10 h-10 object-contain"
                   />
                   <p className="text-slate-200 text-sm text-center">

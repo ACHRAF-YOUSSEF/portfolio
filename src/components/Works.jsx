@@ -41,7 +41,13 @@ const ProjectCard = ({
 
       <div className="relative w-full aspect-18/11 overflow-hidden rounded-xl">
         {image ? (
-          <img src={image} alt={name} className="w-full h-full object-cover" />
+          <img
+            src={image}
+            alt={name}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover"
+          />
         ) : (
           <div className="w-full h-full border border-[#66c7ef57] bg-[radial-gradient(circle_at_20%_20%,rgba(35,80,120,0.6),rgba(10,18,32,0.95))] p-4 flex flex-col justify-between">
             <div className="flex items-center justify-between">
@@ -69,6 +75,8 @@ const ProjectCard = ({
             <img
               src={github}
               alt="github"
+              loading="lazy"
+              decoding="async"
               className="w-1/2 h-1/2 object-contain"
             />
           </button>

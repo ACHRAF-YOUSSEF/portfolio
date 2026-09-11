@@ -14,7 +14,13 @@ const ServiceCard = ({ index, title, icon, description }) => {
     >
       <div className="flex items-center gap-4">
         <div className="w-12 h-12 rounded-xl bg-[#11324b] border border-[#67c7ef47] grid place-items-center">
-          <img src={icon} alt={title} className="w-7 h-7 object-contain" />
+          <img
+            src={icon}
+            alt={title}
+            loading="lazy"
+            decoding="async"
+            className="w-7 h-7 object-contain"
+          />
         </div>
         <h3 className="text-slate-100 font-semibold text-[20px]">{title}</h3>
       </div>

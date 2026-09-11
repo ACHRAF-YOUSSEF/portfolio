@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 import { navLinks } from "../constants";
 import { menu, close } from "../assets";
@@ -61,8 +60,8 @@ const Navbar = () => {
   return (
     <nav className="w-full sticky top-0 z-30 backdrop-blur-md bg-slate-950/55 border-b border-[#4aaedb3f]">
       <div className="sm:px-16 px-5 py-3.5 sm:py-4 w-full flex justify-between items-center max-w-7xl mx-auto gap-3">
-        <Link
-          to="/"
+        <a
+          href="#top"
           className="flex items-center gap-3"
           onClick={() => {
             setActive("About");
@@ -76,7 +75,7 @@ const Navbar = () => {
             Achraf Youssef
           </p>
           <span className="hidden md:inline terminal-chip">arch</span>
-        </Link>
+        </a>
 
         <ul className="list-none hidden lg:flex flex-row gap-3">
           {navLinks.map((link) => (
