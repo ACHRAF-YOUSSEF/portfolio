@@ -63,109 +63,6 @@ const services = [
   },
 ];
 
-const techCategories = [
-  {
-    title: "Programming Languages",
-    items: [
-      { name: "Java", icon: "https://cdn.simpleicons.org/openjdk/ED8B00" },
-      { name: "Python", icon: "https://cdn.simpleicons.org/python/3776AB" },
-      { name: "Kotlin", icon: "https://cdn.simpleicons.org/kotlin/7F52FF" },
-      { name: "Rust", icon: "https://cdn.simpleicons.org/rust/FFFFFF" },
-      {
-        name: "JavaScript",
-        icon: "https://cdn.simpleicons.org/javascript/F7DF1E",
-      },
-      {
-        name: "TypeScript",
-        icon: "https://cdn.simpleicons.org/typescript/3178C6",
-      },
-    ],
-  },
-  {
-    title: "Web Frontend",
-    items: [
-      { name: "HTML5", icon: "https://cdn.simpleicons.org/html5/E34F26" },
-      { name: "CSS3", icon: "https://cdn.simpleicons.org/css/1572B6" },
-      { name: "Angular", icon: "https://cdn.simpleicons.org/angular/DD0031" },
-      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/FFFFFF" },
-      { name: "React", icon: "https://cdn.simpleicons.org/react/61DAFB" },
-      {
-        name: "Tailwind CSS",
-        icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4",
-      },
-      { name: "Sass", icon: "https://cdn.simpleicons.org/sass/CC6699" },
-      {
-        name: "Socket.io",
-        icon: "https://cdn.simpleicons.org/socketdotio/FFFFFF",
-      },
-    ],
-  },
-  {
-    title: "Backend and APIs",
-    items: [
-      {
-        name: "Spring Boot",
-        icon: "https://cdn.simpleicons.org/springboot/6DB33F",
-      },
-      { name: "FastAPI", icon: "https://cdn.simpleicons.org/fastapi/009688" },
-      {
-        name: "Apache Kafka",
-        icon: "https://cdn.simpleicons.org/apachekafka/FFFFFF",
-      },
-      { name: "RabbitMQ", icon: "https://cdn.simpleicons.org/rabbitmq/FF6600" },
-      { name: "JWT", icon: "https://cdn.simpleicons.org/jsonwebtokens/FFFFFF" },
-      { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2D3748" },
-    ],
-  },
-  {
-    title: "Mobile Development",
-    items: [
-      { name: "Flutter", icon: "https://cdn.simpleicons.org/flutter/02569B" },
-      { name: "Android", icon: "https://cdn.simpleicons.org/android/3DDC84" },
-    ],
-  },
-  {
-    title: "Databases",
-    items: [
-      {
-        name: "PostgreSQL",
-        icon: "https://cdn.simpleicons.org/postgresql/316192",
-      },
-      {
-        name: "Oracle",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
-      },
-      { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/4EA94B" },
-    ],
-  },
-  {
-    title: "DevOps, Cloud and Infrastructure",
-    items: [
-      { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ED" },
-      { name: "Jenkins", icon: "https://cdn.simpleicons.org/jenkins/D24939" },
-      { name: "NGINX", icon: "https://cdn.simpleicons.org/nginx/009639" },
-      { name: "AWS", icon: "https://skillicons.dev/icons?i=aws" },
-      { name: "Azure", icon: "https://skillicons.dev/icons?i=azure" },
-      { name: "Git", icon: "https://cdn.simpleicons.org/git/F05033" },
-      {
-        name: "Arch Linux",
-        icon: "https://cdn.simpleicons.org/archlinux/1793D1",
-      },
-      { name: "Bash", icon: "https://cdn.simpleicons.org/gnubash/4EAA25" },
-      { name: "Zsh", icon: "https://cdn.simpleicons.org/gnu/FFFFFF" },
-    ],
-  },
-  {
-    title: "Tools and Documentation",
-    items: [
-      { name: "Figma", icon: "https://cdn.simpleicons.org/figma/F24E1E" },
-      { name: "LaTeX", icon: "https://cdn.simpleicons.org/latex/008080" },
-    ],
-  },
-];
-
-const technologies = techCategories.flatMap((category) => category.items);
-
 const education = [
   {
     degree: "Master of Engineering, Telecommunications Engineering",
@@ -577,8 +474,6 @@ const projects = [
 
 export {
   services,
-  techCategories,
-  technologies,
   education,
   experiences,
   homelabServices,
