@@ -164,10 +164,11 @@ const Contact = () => {
         >
           <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
-              <label className="text-slate-100 font-medium text-sm block">
+              <label htmlFor="name" className="text-slate-100 font-medium text-sm block">
                 <span className="text-[#00d4ff]">$</span> Name
               </label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 value={form.name}
@@ -179,10 +180,11 @@ const Contact = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="text-slate-100 font-medium text-sm block">
+              <label htmlFor="email" className="text-slate-100 font-medium text-sm block">
                 <span className="text-[#00d4ff]">$</span> Email
               </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 value={form.email}
@@ -194,10 +196,11 @@ const Contact = () => {
             </div>
 
             <div className="space-y-2">
-              <label className="text-slate-100 font-medium text-sm block">
+              <label htmlFor="message" className="text-slate-100 font-medium text-sm block">
                 <span className="text-[#00d4ff]">$</span> Message
               </label>
               <textarea
+                id="message"
                 rows="6"
                 name="message"
                 value={form.message}
