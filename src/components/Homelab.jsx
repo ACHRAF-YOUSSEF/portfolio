@@ -93,9 +93,7 @@ const Homelab = () => {
     };
   }, []);
 
-  const checkingStatuses = Object.values(publicStatus).some(
-    (status) => status === "Checking",
-  );
+  const checkingStatuses = Object.values(publicStatus).includes("Checking");
   const onlineCount = Object.values(publicStatus).filter(
     (status) => status === "Online",
   ).length;
