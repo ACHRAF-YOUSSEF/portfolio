@@ -134,7 +134,7 @@ const Homelab = () => {
               aria-hidden="true"
             >
               <motion.span
-                className="absolute -top-1.5 block size-3 -translate-x-1/2 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
+                className="absolute -top-1.5 z-10 block size-3 -translate-x-1/2 rounded-full bg-[#a6e22e] shadow-[0_0_16px_rgba(166,226,46,0.9)]"
                 animate={{
                   left: [
                     "0%",
