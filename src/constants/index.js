@@ -246,13 +246,8 @@ const homelabServices = {
       status: "Online",
     },
     {
-      name: "Excalidraw",
-      url: "https://excalidraw.achrafyoussef.tech/",
-      status: "Online",
-    },
-    {
-      name: "Draw.io",
-      url: "https://drawio.achrafyoussef.tech/",
+      name: "NextCloud",
+      url: "https://cloud.achrafyoussef.tech/",
       status: "Online",
     },
     { 
