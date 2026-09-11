@@ -1,24 +1,9 @@
 import backend from "./roles/backend.png";
 import creator from "./roles/creator.png";
 import mobile from "./roles/mobile.png";
-import web from "./roles/web.png";
 import github from "./ui/github.png";
 import menu from "./ui/menu.svg";
 import close from "./ui/close.svg";
-
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import reactjs from "./tech/reactjs.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import angularjs from "./tech/angularjs-original.svg";
-import java from "./tech/java.svg";
-import postgresql from "./tech/postgresql.svg";
-import bootstrap from "./tech/bootstrap.svg";
 
 import relead from "./company/logo-relead-aligned.png";
 
@@ -37,7 +22,6 @@ export {
   bizcord_showcase,
   serenade_showcase,
   vaultkeeper_showcase,
-  bootstrap,
   relead,
   netflix_clone,
   mangatn_showcase,
@@ -46,23 +30,10 @@ export {
   artflix_showcase,
   news_app_showcase,
   admin_dashboard,
-  java,
-  postgresql,
   backend,
   creator,
   mobile,
-  web,
   github,
   menu,
   close,
-  css,
-  docker,
-  git,
-  html,
-  javascript,
-  mongodb,
-  reactjs,
-  tailwind,
-  typescript,
-  angularjs,
 };
