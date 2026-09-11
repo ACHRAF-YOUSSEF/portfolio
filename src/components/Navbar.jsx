@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -20,7 +19,8 @@ const Navbar = () => {
             return null;
           }
 
-          const sectionTop = section.getBoundingClientRect().top + globalThis.scrollY;
+          const sectionTop =
+            section.getBoundingClientRect().top + globalThis.scrollY;
 
           return {
             id: link.id,
@@ -47,7 +47,9 @@ const Navbar = () => {
     };
 
     updateActiveSection();
-    globalThis.addEventListener("scroll", updateActiveSection, { passive: true });
+    globalThis.addEventListener("scroll", updateActiveSection, {
+      passive: true,
+    });
     globalThis.addEventListener("hashchange", updateActiveSection);
 
     return () => {
@@ -57,9 +59,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className="w-full sticky top-0 z-30 backdrop-blur-md bg-slate-950/55 border-b border-[#4aaedb3f]"
-    >
+    <nav className="w-full sticky top-0 z-30 backdrop-blur-md bg-slate-950/55 border-b border-[#4aaedb3f]">
       <div className="sm:px-16 px-5 py-3.5 sm:py-4 w-full flex justify-between items-center max-w-7xl mx-auto gap-3">
         <Link
           to="/"
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="w-9 h-9 rounded-full border border-[#5bc0eb6b] bg-[#0d2033] grid place-items-center mono text-[#7fd0f4] text-sm">
             &gt;
           </div>
-          <p className="text-slate-100 text-[15px] xs:text-[16px] sm:text-[18px] font-bold cursor-pointer truncate max-w-[150px] xs:max-w-none">
+          <p className="text-slate-100 text-[15px] xs:text-[16px] sm:text-[18px] font-bold cursor-pointer truncate max-w-37.5 xs:max-w-none">
             Achraf Youssef
           </p>
           <span className="hidden md:inline terminal-chip">arch</span>
@@ -109,14 +109,14 @@ const Navbar = () => {
             <img
               src={toggle ? close : menu}
               alt="menu"
-              className="w-[28px] h-[28px] object-contain cursor-pointer"
+              className="w-7 h-7 object-contain cursor-pointer"
             />
           </button>
 
           <div
             className={`${
               toggle ? "flex" : "hidden"
-            } p-5 absolute rounded-xl z-10 min-w-[170px] my-2 mx-4 top-16 right-0 shell-card`}
+            } p-5 absolute rounded-xl z-10 min-w-42.5 my-2 mx-4 top-16 right-0 shell-card`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (

@@ -40,8 +40,8 @@ const checkServiceAvailability = async (url, timeoutMs = 8000) => {
 const Homelab = () => {
   const [publicStatus, setPublicStatus] = useState(() =>
     Object.fromEntries(
-      homelabServices.public.map((service) => [service.name, "Checking"])
-    )
+      homelabServices.public.map((service) => [service.name, "Checking"]),
+    ),
   );
 
   useEffect(() => {
@@ -50,9 +50,11 @@ const Homelab = () => {
     const updateStatuses = async () => {
       const checks = await Promise.all(
         homelabServices.public.map(async (service) => {
-          const status = await checkServiceAvailability(service.healthUrl ?? service.url);
+          const status = await checkServiceAvailability(
+            service.healthUrl ?? service.url,
+          );
           return [service.name, status];
-        })
+        }),
       );
 
       if (isActive) {
@@ -78,7 +80,7 @@ const Homelab = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-slate-300 text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-slate-300 text-[17px] max-w-3xl leading-7.5"
       >
         Selected self-hosted apps are exposed securely for public access.
         Availability is checked automatically and updates live.
@@ -90,7 +92,9 @@ const Homelab = () => {
           className="shell-card p-6 w-full"
         >
           <div className="flex items-center justify-between gap-4">
-            <h3 className="text-slate-100 text-2xl font-semibold">Public Services</h3>
+            <h3 className="text-slate-100 text-2xl font-semibold">
+              Public Services
+            </h3>
             <span className="terminal-chip">online</span>
           </div>
           <div className="mt-5 space-y-3">
@@ -107,7 +111,7 @@ const Homelab = () => {
                   <p className="text-slate-100 font-medium">{service.name}</p>
                   <span
                     className={`rounded-full border px-2 py-0.5 text-[11px] ${getPublicBadgeClass(
-                      publicStatus[service.name]
+                      publicStatus[service.name],
                     )}`}
                   >
                     {publicStatus[service.name] ?? "Checking"}

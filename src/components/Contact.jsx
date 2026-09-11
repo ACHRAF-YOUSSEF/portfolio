@@ -9,7 +9,9 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ContactInfo = ({ label, value, href, isLink = false }) => {
   const content = (
     <div className="flex items-start gap-4">
-      <span className="text-[#00d4ff] font-mono text-sm min-w-fit">~/{label}:</span>
+      <span className="text-[#00d4ff] font-mono text-sm min-w-fit">
+        ~/{label}:
+      </span>
       <span className="text-slate-300">{value}</span>
     </div>
   );
@@ -65,7 +67,7 @@ const Contact = () => {
           to_email: "yachraf403@gmail.com",
           message: form.message,
         },
-        "6UW1CEpnbQ_9hJQPo"
+        "6UW1CEpnbQ_9hJQPo",
       )
       .then(
         () => {
@@ -80,13 +82,18 @@ const Contact = () => {
           console.log(error);
           setFeedback("error");
           setTimeout(() => setFeedback(""), 3000);
-        }
+        },
       );
   };
 
   return (
     <div className="w-full">
-      <motion.div variants={textVariant()} initial="hidden" animate="show" className="mb-8">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        animate="show"
+        className="mb-8"
+      >
         <p className={styles.sectionSubText}>What&apos;s next?</p>
         <h2 className={styles.sectionHeadText}>Get In Touch</h2>
       </motion.div>
@@ -114,7 +121,9 @@ const Contact = () => {
               <div className="w-2 h-2 rounded-full bg-[#00d4ff] animate-pulse"></div>
               <span className="text-slate-300">Available for internships</span>
             </div>
-            <p className="text-slate-400 text-sm mt-2">Looking for 2026 opportunities</p>
+            <p className="text-slate-400 text-sm mt-2">
+              Looking for 2026 opportunities
+            </p>
           </div>
 
           <div className="shell-card p-6">
@@ -222,10 +231,12 @@ const Contact = () => {
                 disabled={loading}
                 className="relative group px-8 py-3 font-semibold text-slate-100 overflow-hidden rounded-lg transition-all duration-300"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[#00d4ff] to-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-[#00d4ff] to-[#0099ff] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-[#0f1d2f] group-hover:bg-transparent transition-colors duration-300"></div>
                 <span className="relative flex items-center justify-center gap-2">
-                  <span className="text-[#00d4ff] group-hover:text-slate-100 transition-colors">$</span>
+                  <span className="text-[#00d4ff] group-hover:text-slate-100 transition-colors">
+                    $
+                  </span>
                   {loading ? "sending..." : "send message"}
                 </span>
               </button>

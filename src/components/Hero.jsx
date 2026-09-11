@@ -57,9 +57,9 @@ const Hero = () => {
           <div className="space-y-5 sm:space-y-6">
             <span className="terminal-chip">[achraf@archlinux ~]$ whoami</span>
             <h1 className={styles.heroHeadText}>
-              Software engineer with a {" "}
-              <span className="text-[#67c6f0]">Linux-first</span>{" "}
-              builder mindset.
+              Software engineer with a{" "}
+              <span className="text-[#67c6f0]">Linux-first</span> builder
+              mindset.
             </h1>
             <p className={`${styles.heroSubText} max-w-2xl text-slate-300/95`}>
               I design practical apps across web, mobile, and backend systems.
@@ -112,16 +112,21 @@ const Hero = () => {
                 <span className="text-[#a6e22e]">{typedCommand}</span>
                 <span className="animate-pulse text-[#a6e22e]">_</span>
               </p>
-              {showOutput && (
-                terminalEntries[entryIndex].variant === "cat" ? (
+              {showOutput &&
+                (terminalEntries[entryIndex].variant === "cat" ? (
                   <div className="rounded-md border border-[#6f85a040] bg-[#0c1020]/85 overflow-hidden">
                     <div className="px-3 py-2 border-b border-[#6f85a040] text-[#d7dde8]">
                       File: {terminalEntries[entryIndex].filePath}
                     </div>
                     <div className="px-3 py-2 space-y-1">
                       {terminalEntries[entryIndex].output.map((row) => (
-                        <p key={`${row.line}-${row.key}`} className="flex gap-3">
-                          <span className="w-5 text-right text-[#7b8394]">{row.line}</span>
+                        <p
+                          key={`${row.line}-${row.key}`}
+                          className="flex gap-3"
+                        >
+                          <span className="w-5 text-right text-[#7b8394]">
+                            {row.line}
+                          </span>
                           <span className="text-[#ff5fa2]">{row.key}</span>
                           <span className="text-[#f0e68c]">=</span>
                           <span className="text-[#f8f8f2]">{row.value}</span>
@@ -137,8 +142,7 @@ const Hero = () => {
                       </p>
                     ))}
                   </div>
-                )
-              )}
+                ))}
             </div>
           </motion.div>
         </div>
@@ -146,7 +150,7 @@ const Hero = () => {
 
       <div className="absolute bottom-4 sm:bottom-6 w-full hidden sm:flex justify-center items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-2 border-[#4fb3df81] flex justify-center items-start p-2">
+          <div className="w-8.75 h-16 rounded-3xl border-2 border-[#4fb3df81] flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],

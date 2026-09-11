@@ -7,7 +7,15 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, status }) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+  status,
+}) => {
   const isWorkInProgress =
     normalizeCategory(status) === "wip" ||
     tags.some((tag) => normalizeCategory(tag.name) === "in progress");
@@ -17,21 +25,21 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
       initial="hidden"
       animate="show"
-      className="shell-card p-5 sm:w-[360px] w-full relative"
+      className="shell-card p-5 sm:w-90 w-full relative"
     >
       {isWorkInProgress && (
         <div className="absolute top-0 left-4 z-20 group">
           <div className="bg-[#1c7ea4] text-[#eaf8ff] text-[11px] font-semibold px-3 py-1 rounded-b-md shadow-[0_0_14px_rgba(54,179,226,0.35)]">
             WIP
           </div>
-          <div className="mx-auto w-0 h-0 border-l-[10px] border-r-[10px] border-t-[8px] border-l-transparent border-r-transparent border-t-[#1c7ea4]" />
+          <div className="mx-auto w-0 h-0 border-l-10 border-r-10 border-t-8 border-l-transparent border-r-transparent border-t-[#1c7ea4]" />
           <div className="pointer-events-none absolute left-1/2 top-full mt-2 -translate-x-1/2 whitespace-nowrap rounded-md border border-[#66c7ef57] bg-[#0a1626f0] px-2 py-1 text-[11px] text-slate-200 opacity-0 transition group-hover:opacity-100 hidden sm:block">
             Work in progress - features are still being built
           </div>
         </div>
       )}
 
-      <div className="relative w-full aspect-[18/11] overflow-hidden rounded-xl">
+      <div className="relative w-full aspect-18/11 overflow-hidden rounded-xl">
         {image ? (
           <img src={image} alt={name} className="w-full h-full object-cover" />
         ) : (
@@ -42,7 +50,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 
             <div className="mono text-[#c6d6e8] text-sm leading-6">
               <p>
-                <span className="text-[#a6e22e]">&gt; </span>{name.toLowerCase()}
+                <span className="text-[#a6e22e]">&gt; </span>
+                {name.toLowerCase()}
               </p>
               <p className="text-slate-300">status: active development</p>
               <p className="text-slate-300">preview: coming soon</p>
@@ -57,7 +66,11 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
             aria-label={`Open ${name} source code`}
             type="button"
           >
-            <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
+            <img
+              src={github}
+              alt="github"
+              className="w-1/2 h-1/2 object-contain"
+            />
           </button>
         </div>
       </div>
@@ -65,7 +78,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
       <div className="mt-5">
         <h3 className="text-slate-100 font-bold text-[24px]">{name}</h3>
         {isWorkInProgress && (
-          <p className="mt-1 text-[12px] text-[#9bd5ef] sm:hidden">Work in progress</p>
+          <p className="mt-1 text-[12px] text-[#9bd5ef] sm:hidden">
+            Work in progress
+          </p>
         )}
         <p className="mt-2 text-slate-400 text-[14px]">{description}</p>
       </div>
@@ -95,7 +110,10 @@ const ProjectCategory = ({ name, onClick, isSelected }) => {
   );
 };
 
-const normalizeCategory = (value) => String(value ?? "").trim().toLowerCase();
+const normalizeCategory = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase();
 
 const projectHasCategory = (project, selectedCategory) => {
   if (normalizeCategory(selectedCategory) === "all") {
@@ -104,11 +122,14 @@ const projectHasCategory = (project, selectedCategory) => {
 
   if (Array.isArray(project.category)) {
     return project.category.some(
-      (category) => normalizeCategory(category) === normalizeCategory(selectedCategory)
+      (category) =>
+        normalizeCategory(category) === normalizeCategory(selectedCategory),
     );
   }
 
-  return normalizeCategory(project.category) === normalizeCategory(selectedCategory);
+  return (
+    normalizeCategory(project.category) === normalizeCategory(selectedCategory)
+  );
 };
 
 const preferredCategoryOrder = [
@@ -123,31 +144,32 @@ const preferredCategoryOrder = [
 const Works = () => {
   const categories = useMemo(() => {
     const availableCategories = projects.flatMap((project) =>
-      Array.isArray(project.category) ? project.category : [project.category]
+      Array.isArray(project.category) ? project.category : [project.category],
     );
 
     const uniqueCategories = [
       "All",
       ...new Set(
         availableCategories.filter(
-          (category) => category && normalizeCategory(category) !== "all"
-        )
+          (category) => category && normalizeCategory(category) !== "all",
+        ),
       ),
     ];
 
     const orderedPreferred = preferredCategoryOrder.filter((category) =>
       uniqueCategories.some(
         (availableCategory) =>
-          normalizeCategory(availableCategory) === normalizeCategory(category)
-      )
+          normalizeCategory(availableCategory) === normalizeCategory(category),
+      ),
     );
 
     const customCategories = uniqueCategories.filter(
       (category) =>
         !preferredCategoryOrder.some(
           (preferredCategory) =>
-            normalizeCategory(preferredCategory) === normalizeCategory(category)
-        )
+            normalizeCategory(preferredCategory) ===
+            normalizeCategory(category),
+        ),
     );
 
     return [...orderedPreferred, ...customCategories];
@@ -157,7 +179,7 @@ const Works = () => {
 
   const filteredProjects = useMemo(
     () => projects.filter((project) => projectHasCategory(project, category)),
-    [category]
+    [category],
   );
 
   const handleCategoryChange = (newCategory) => {
@@ -173,7 +195,7 @@ const Works = () => {
 
       <div className="w-full flex">
         <motion.p
-          className="mt-4 text-slate-300 text-[17px] max-w-3xl leading-[30px]"
+          className="mt-4 text-slate-300 text-[17px] max-w-3xl leading-7.5"
           variants={fadeIn("", "", 0.1, 1)}
           initial="hidden"
           animate="show"

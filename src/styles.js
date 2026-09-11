@@ -8,10 +8,8 @@ const styles = {
   heroSubText:
     "text-slate-300 font-medium lg:text-[24px] sm:text-[20px] xs:text-[18px] text-[16px] leading-[1.55]",
 
-  sectionHeadText:
-    "section-title",
-  sectionSubText:
-    "section-kicker",
+  sectionHeadText: "section-title",
+  sectionSubText: "section-kicker",
 };
 
 export { styles };

@@ -23,7 +23,9 @@ const ExperienceCard = ({ experience, index }) => (
           <h3 className="text-slate-100 text-[22px] font-bold">
             {experience.title}
           </h3>
-          <p className="text-[#8fd6fa] text-[15px]">{experience.company_name}</p>
+          <p className="text-[#8fd6fa] text-[15px]">
+            {experience.company_name}
+          </p>
         </div>
       </div>
 

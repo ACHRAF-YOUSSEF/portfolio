@@ -32,7 +32,7 @@ const About = () => {
       </motion.div>
 
       <motion.p
-        className="mt-6 text-slate-300 text-[17px] max-w-4xl leading-[30px]"
+        className="mt-6 text-slate-300 text-[17px] max-w-4xl leading-7.5"
         variants={fadeIn("", "", 0.1, 1)}
       >
         I am a software engineering student focused on full stack product

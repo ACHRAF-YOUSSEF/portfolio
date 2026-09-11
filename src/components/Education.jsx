@@ -22,7 +22,9 @@ const Education = () => {
           >
             <div className="flex items-start justify-between gap-4 flex-wrap">
               <div>
-                <h3 className="text-slate-100 text-[22px] font-bold">{item.degree}</h3>
+                <h3 className="text-slate-100 text-[22px] font-bold">
+                  {item.degree}
+                </h3>
                 <p className="text-[#8fd6fa] text-[15px] mt-1">{item.school}</p>
               </div>
               <p className="terminal-chip">{item.date}</p>
@@ -30,7 +32,10 @@ const Education = () => {
 
             <ul className="mt-5 list-disc ml-5 space-y-2">
               {item.details.map((detail) => (
-                <li key={`${item.school}-${detail}`} className="text-slate-300 text-[14px] pl-1">
+                <li
+                  key={`${item.school}-${detail}`}
+                  className="text-slate-300 text-[14px] pl-1"
+                >
                   {detail}
                 </li>
               ))}
