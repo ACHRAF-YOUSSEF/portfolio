@@ -60,11 +60,25 @@ const checkServiceAvailability = async (url, timeoutMs = 8000) => {
 };
 
 const Homelab = () => {
+  const [latestRelease, setLatestRelease] = useState(null);
   const [publicStatus, setPublicStatus] = useState(() =>
     Object.fromEntries(
       homelabServices.public.map((service) => [service.name, "Checking"]),
     ),
   );
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    fetch("https://api.github.com/repos/ACHRAF-YOUSSEF/homelab-tui/releases/latest", {
+      signal: controller.signal,
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((release) => release?.tag_name && setLatestRelease(release.tag_name))
+      .catch(() => {});
+
+    return () => controller.abort();
+  }, []);
 
   useEffect(() => {
     let isActive = true;
@@ -244,9 +258,10 @@ const Homelab = () => {
                   href="https://github.com/ACHRAF-YOUSSEF/homelab-tui/releases/latest"
                   target="_blank"
                   rel="noreferrer"
+                  aria-live="polite"
                   className="rounded-full border border-[#a6e22e66] bg-[#a6e22e14] px-3 py-1 text-xs font-semibold text-[#c8f56a] transition hover:border-[#a6e22e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]"
                 >
-                  Latest release · v2.2.0
+                  Latest release{latestRelease && ` · ${latestRelease}`}
                 </a>
               </div>
               <h3 className="mt-2 text-2xl font-bold text-slate-100">
