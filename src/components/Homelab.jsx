@@ -229,8 +229,8 @@ const Homelab = () => {
                 <p className="mono text-xs text-slate-500">homelab-tui</p>
               </div>
               <img
-                src="https://raw.githubusercontent.com/ACHRAF-YOUSSEF/homelab-tui/main/assets/monitor.png"
-                alt="homelab-tui monitor showing remote services and host metrics"
+                src={`${import.meta.env.BASE_URL}projects_images/homelab-tui/logs.png`}
+                alt="homelab-tui showing multiple host tabs, services, and live logs"
                 loading="lazy"
                 decoding="async"
                 className="block h-auto w-full"
@@ -238,7 +238,17 @@ const Homelab = () => {
             </div>
 
             <div className="px-1 pt-6 sm:px-2">
-              <p className="mono text-sm text-[#a6e22e]">The cockpit</p>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <p className="mono text-sm text-[#a6e22e]">The cockpit</p>
+                <a
+                  href="https://github.com/ACHRAF-YOUSSEF/homelab-tui/releases/latest"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-[#a6e22e66] bg-[#a6e22e14] px-3 py-1 text-xs font-semibold text-[#c8f56a] transition hover:border-[#a6e22e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#a6e22e]"
+                >
+                  Latest release · v2.2.0
+                </a>
+              </div>
               <h3 className="mt-2 text-2xl font-bold text-slate-100">
                 homelab-tui
               </h3>
@@ -256,6 +266,14 @@ const Homelab = () => {
                   className="arch-button inline-flex min-h-11 items-center rounded-lg px-5 py-2.5 text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#58b8e6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050911]"
                 >
                   View the terminal UI
+                </a>
+                <a
+                  href="https://achraf-youssef.github.io/homelab-tui/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex min-h-11 items-center rounded-lg border border-[#58b8e666] px-5 py-2.5 text-sm font-semibold text-[#8edcff] transition hover:border-[#58b8e6] hover:bg-[#58b8e614] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#58b8e6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#050911]"
+                >
+                  Documentation
                 </a>
                 <code className="rounded-md border border-[#58b8e633] bg-[#0b1524] px-3 py-2 text-xs text-slate-400">
                   npm i -g homelab-tui
