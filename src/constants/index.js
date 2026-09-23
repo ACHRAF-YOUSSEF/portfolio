@@ -69,7 +69,7 @@ const education = [
     degree: "Master of Engineering, Telecommunications Engineering",
     school:
       "Higher Institute of Computer Science and Communication Technologies",
-    date: "Sep 2024 – Sep 2027",
+    date: "Sep 2024 - Sep 2027",
     details: [
       "Engineering cycle focused on telecommunications engineering and advanced software systems.",
       "Building academic projects across mobile, desktop, and web tracks.",
@@ -79,8 +79,8 @@ const education = [
   {
     degree: "Bachelor of Engineering, Computer Science",
     school:
-      "Higher Institute of Computer Science and Communication Techniques – Hammam Sousse",
-    date: "Sep 2021 – Jun 2024",
+      "Higher Institute of Computer Science and Communication Techniques - Hammam Sousse",
+    date: "Sep 2021 - Jun 2024",
     details: [
       "Completed undergraduate engineering studies in computer science.",
       "Built academic projects across desktop, mobile, and web technologies.",
@@ -146,12 +146,6 @@ const experiences = [
 
 const homelabServices = {
   public: [
-    {
-      name: "Homarr",
-      url: "https://home.achrafyoussef.tech/",
-      healthUrl: "https://home.achrafyoussef.tech/boards/HOMEPAGE",
-      status: "Online",
-    },
     {
       name: "Jellyfin",
       url: "https://jellyfin.achrafyoussef.tech/",

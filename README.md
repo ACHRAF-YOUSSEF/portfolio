@@ -25,7 +25,7 @@ Personal portfolio website for Achraf Youssef — engineering student (Master's 
 - **About** — role overview and service cards
 - **Education** — Bachelor's and Master's at ISITCOM
 - **Experience** — internships at Relead (Angular · Spring Boot · MongoDB · PostgreSQL · JWT · CI/CD)
-- **Homelab** — self-hosted services: Homarr, Jellyfin, Excalidraw, Draw.io, n8n, OpenWebUI, IT-Tools, StirlingPDF
+- **Homelab** — self-hosted services: Glance, Jellyfin, n8n, OpenWebUI, IT-Tools, StirlingPDF
 - **Projects** — filterable grid with category tags
 - **Contact** — EmailJS contact form
 
